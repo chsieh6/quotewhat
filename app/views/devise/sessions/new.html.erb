@@ -1,0 +1,54 @@
+<% provide(:title, 'Sign In') %>
+
+<div class="container sign_in">
+	<div class="row">
+	  <div class="col-md-6 col-md-offset-3">
+	  	<div class="panel panel-default">
+	  		<div class="panel-heading text-center">
+	  			<h1>Sign in<br/><small>Get ready to <em>explore the world</em></small></h1>
+	  		</div>
+				<div class="panel-body">
+					<div class="row">
+						<div class="col-md-12">
+							<%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
+							  <div class="form-group">
+							  	<%= f.label :email %>
+							  	<%= f.email_field :email, class: "form-control" %>
+								</div>
+								<div class="form-group">
+									<%= f.label :password %>
+							  	<%= f.password_field :password, class: "form-control" %>
+								</div>
+							  <% if devise_mapping.rememberable? -%>
+								  <div class="form-group">
+								  	<div class="checkbox">
+								  		<%= f.check_box :remember_me %>
+								  		<%= f.label :remember_me %>
+								  	</div>
+								  </div>
+							  <% end -%>
+								<div class="form-group">
+							  	<%= f.submit "Sign in", class: "btn btn-primary" %>
+								</div>
+							<% end %>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-12 text-center">
+							<h1>OR</h1>
+							<hr>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-12 text-center">
+							<a class="btn btn-facebook zocial facebook" href="/users/auth/facebook">Sign in with Facebook</a>
+						</div>
+					</div>
+				</div>
+				<div class="panel-footer">
+					<%= render "devise/shared/links" %>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,88 @@
+<% provide(:title, 'QuoteWhat') %>
+
+<!-- Full Page Image Header Area -->
+<div id="top" class="header">
+  <div class="vert-text full_page">
+    <h1>Don't Remember a Quote?</h1>
+    <h3><em>We</em> Help You Store It, <em>You</em> Keep On Changing</h3>
+    <div class="row">
+      <div class="container search-bar">
+        <div class="col-md-8 col-md-offset-2">
+          <%= form_tag(pins_path, :method => "get", id: "search-form") do %>
+            <div class="input-group">
+              <%= text_field_tag :search, params[:search], class: "form-control search-bar", placeholder: "Search Quotes, Category, Author" %>
+              <div class="input-group-btn">
+                <button class="btn btn-lg btn-default search-btn" type="submit">Search</button>
+                <%= link_to "Sign In Now", new_user_session_path, class: "btn btn-primary btn-lg" %>
+              </div>
+            </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Services -->
+<div id="services" class="services">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 col-md-offset-3 text-center">
+        <h2>- You Can Do Several Things -</h2>
+        <hr style="border-top: solid 1px black">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-4 text-center">
+        <img src="/assets/network-step1.jpg" class="img-thumbnail img-responsive" alt="">
+        <h4><span>1.</span> Create Your Own Page</h4>
+        <p>You can start storing Quotes and Picture Quote on your own profile!  You will no longer forget a quote.</p>
+      </div>
+      <div class="col-md-4 text-center">
+        <img src="/assets/network-step2.jpg" class="img-thumbnail img-responsive" alt="">
+        <h4><span>2.</span> Search For a Quote</h4>
+        <p>In Need for a quote?  No problem, just type in a keyword, author, or even a category and we will search for a quote for you!</p>
+      </div>
+      <div class="col-md-4 text-center">
+        <img src="/assets/network-step3.jpg" class="img-thumbnail img-responsive" alt="">
+        <h4><span>3.</span> Follow Other People's Page</h4>
+        <p>Are there people that you feel their quote are inspiring, funny, heartwarming, whatever makes you happy.  Follow them!</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-4 text-center">
+        <%= link_to "Sign In", new_user_session_path, class: "btn btn-primary btn-lg" %>
+      </div>
+      <div class="col-md-4 text-center">
+        <a href="#top" class="btn btn-lg btn-default">Search</a>
+      </div>
+      <div class="col-md-4 text-center">
+        <%= link_to "Sign In", new_user_session_path, class: "btn btn-primary btn-lg" %>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- /Services -->
+
+<!-- Callout -->
+<div class="callout">
+  <div class="callout-text">
+    <h2><em>"TravelFig is a great place for me to write my travel stories and recommendations.  It is also easy for me to find other relevant travel itineraries."</em></h2>
+    <h3>- Member, San Francisco</h3>
+  </div>
+</div>
+<!-- /Callout -->
+
+<!-- Call to Action -->
+<div class="call-to-action">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2 text-center">
+        <h3>Don't Hesitate Anymore!  Contribute Your Favorite Quote!</h3>
+        <a href="/users/sign_up" class="btn btn-lg btn-default">Sign Up</a>
+        <a href="#top" class="btn btn-lg btn-primary">Back Top</a>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- /Call to Action -->
