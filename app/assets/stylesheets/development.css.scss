@@ -27,7 +27,7 @@ p {
 }
 
 body {
-  background: url(/assets/background-wet_snow.png);
+  background: url("https://dl.dropboxusercontent.com/u/21093381/quotewhat/background-wet_snow.png");
   height: 100%;
   width: 100%;
   padding-top: 50px;
@@ -109,7 +109,7 @@ body {
   height: 100%;
   width: 100%;
   position: relative;
-  background: url(/assets/home-banner.jpg) no-repeat center center fixed; 
+  background: url("https://dl.dropboxusercontent.com/u/21093381/quotewhat/home-banner.jpg") no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -187,7 +187,7 @@ footer {
   display: table;
   height: 250px;
   width: 100%;
-  background: url(/assets/about-banner.jpg) no-repeat center center fixed; 
+  background: url("https://dl.dropboxusercontent.com/u/21093381/quotewhat/about-banner.jpg") no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -217,7 +217,7 @@ footer {
 
 #aboutcontent {
   padding:50px 0px;
-  background: url(/assets/background-ricepaper.png);
+  background: url("https://dl.dropboxusercontent.com/u/21093381/quotewhat/background-ricepaper.png");
   img {
     margin: 0 auto;
     height: 300px;
@@ -226,7 +226,7 @@ footer {
 
 #teamprofile {
   padding:50px 0px;
-  background: url(/assets/background-retina_wood.png);
+  background: url("https://dl.dropboxusercontent.com/u/21093381/quotewhat/background-retina_wood.png");
   .container {
     img {
       margin: 0 auto;
@@ -242,7 +242,7 @@ footer {
   display: table;
   height: 200px;
   width: 100%;
-  background: url(/assets/index-banner.jpg) no-repeat center center fixed; 
+  background: url("https://dl.dropboxusercontent.com/u/21093381/quotewhat/index-banner.jpg") no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -293,7 +293,7 @@ footer {
 .profileheader {
   height: 280px;
   width: 100%;
-  background-image: url(/assets/profile-banner.jpg);
+  background-image: url("https://dl.dropboxusercontent.com/u/21093381/quotewhat/profile-banner.jpg");
   background-position: center center;
   border-bottom: 1px solid black;
   box-shadow: 1px 1px 10px #444;
@@ -324,7 +324,7 @@ footer {
     color: white;
     border: 1px solid #dddddd;
     border-bottom: none;
-    background: url(/assets/background-tweed.png);
+    background: url("https://dl.dropboxusercontent.com/u/21093381/quotewhat/background-tweed.png");
   }
 
   li > a:hover {
@@ -364,46 +364,6 @@ footer {
   top: 10px;
   left: 70px;
   z-index: 1000;
-}
-
-/* INDIVIDUAL TRAVELBOOK DISPLAY
--------------------------------------------------- */
-.modal-body {
-  padding: 0px;
-
-  .book-profile {
-    border-bottom: 1px solid black;
-
-    li > a {
-      color: black;
-      border: 1px solid #dddddd;
-      border-bottom: none;
-      background: url(/assets/background-fresh_snow.png);
-    }
-
-    li > a:hover {
-      opacity: 0.5;
-    }
-
-    li.active {
-      a {
-        color: white;
-        background: black;
-        border: 1px solid #ffffff;
-        border-bottom: none;
-      }
-      a:hover {
-        color: white;
-        opacity:1;
-        background: black;
-      }
-    }
-  }
-
-  .link-center {
-    width: 20%;
-    margin-left: 40%;
-  }
 }
 
 /* JQUERY ISOTOPE
