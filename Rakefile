@@ -3,4 +3,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-Travelfig::Application.load_tasks
+Quotewhat::Application.load_tasks

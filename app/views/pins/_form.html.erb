@@ -12,24 +12,26 @@
     </div>
   <% end %>
   <div class="form-group">
-    <%= f.label :city %>
-    <%= f.text_field :city, placeholder: "San Francisco, Taipei, London, etc", class: "form-control" %>
+    <%= f.label :content %>
+    <%= f.text_area :content, rows: "5", placeholder: "I have no special talent.  I am only passionately curious.", class: "form-control" %>
   </div>
   <div class="form-group">
-    <%= f.label :country %>
-    <%= f.text_field :country, placeholder: "United States, Taiwan, UK, etc", class: "form-control" %>
+    <%= f.label :author %>
+    <%= f.text_field :author, placeholder: "Albert Einstein", class: "form-control" %>
   </div>
   <div class="form-group">
     <%= f.label :category %>
-    <%= f.select(:category, options_for_select([['My Passport', 'passport'], ['Future Destination', 'future']], "passport"), {}, {class: "form-control"}) %>
+    <%= f.select(:category, options_for_select([['Love', 'love'], ['Humor', 'humor']], "love"), {}, {class: "form-control"}) %>
   </div>
+  <h3>Upload a Picture Quote</h3>
+  <hr>
 	<div class="form-group">
-		<%= f.label :cover, "Upload a TravelPin Cover" %>
-		<%= f.file_field :cover, class: "form-control" %>
+		<%= f.label :image, "From Computer" %>
+		<%= f.file_field :image, class: "form-control" %>
 	</div>
   <div class="form-group">
-  	<%= f.label :cover_remote_url, "Upload TravelPin Cover From a Website" %>
-  	<%= f.text_field :cover_remote_url, placeholder: "http://prettypic.com/mountain.jpg", class: "form-control" %>
+  	<%= f.label :image_remote_url, "From Website" %>
+  	<%= f.text_field :image_remote_url, placeholder: "http://prettypic.com/mountain.jpg", class: "form-control" %>
 	</div>
 	<div class="form-group">
   	<%= f.submit "Submit", class: "btn btn-primary" %>

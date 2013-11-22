@@ -9,6 +9,9 @@
  * compiled file, but it's generally better to create a new file per style scope.
  *
  *= require zocial.css
+ *= require 'masonry/centered'
+ *= require 'masonry/infinitescroll'
+ *= require 'masonry/transitions'
  *= require bootstrap.min.css
  *= require_self
  *= require_tree .

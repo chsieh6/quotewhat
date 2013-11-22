@@ -27,12 +27,10 @@ class PinsController < ApplicationController
   # POST /pins.json
   def create
     @pin = current_user.pins.new(pin_params)
-    @diary = Diary.create(params[:diary_attributes])
-    @pin.diary = @diary
 
     respond_to do |format|
       if @pin.save
-        format.html { redirect_to @pin, notice: 'Pin was successfully created.' }
+        format.html { redirect_to @pin, notice: 'Quote was successfully created.' }
         format.json { render action: 'show', status: :created, location: @pin }
       else
         format.html { render action: 'new' }
@@ -46,7 +44,7 @@ class PinsController < ApplicationController
   def update
     respond_to do |format|
       if @pin.update(pin_params)
-        format.html { redirect_to @pin, notice: 'Pin was successfully updated.' }
+        format.html { redirect_to @pin, notice: 'Quote was successfully updated.' }
         format.json { head :no_content }
       else
         format.html { render action: 'edit' }
@@ -77,6 +75,6 @@ class PinsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def pin_params
-      params.require(:pin).permit(:city, :country, :category, :cover, :cover_remote_url, :diary_attributes => [:id, :title, :body])
+      params.require(:pin).permit(:content, :author, :category, :image, :image_remote_url)
     end
 end

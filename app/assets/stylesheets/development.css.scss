@@ -44,7 +44,7 @@ body {
 
   .navbar-brand {
     padding: 14px 20px 16px 70px;
-    font-size: 2em;
+    font-size: 1.5em;
     font-weight: bold;
     font-family: 'Ribeye', cursive;
     text-shadow: 0 0 15px #202020;
@@ -271,6 +271,18 @@ footer {
   }
 }
 
+.index-container {
+  max-width: 1600px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 1%;
+  padding-right: 3%;
+}
+
+.index-well {
+  background: #FFF1CE;
+}
+
 .show_pin {
   img {
     width: 90%;
@@ -349,7 +361,7 @@ footer {
 /* ADD BUTTON & CATEGORY BUTTON & LIKE BUTTON
 -------------------------------------------------- */
 
-.add_button, .move_button {
+.add_button {
   position: fixed;
   top: 10px;
   left: 10px;
@@ -369,14 +381,12 @@ footer {
 /* JQUERY ISOTOPE
 -------------------------------------------------- */
 
-#isotope-container {
-  margin: auto;
-  width: 90%;
+#masonry-container {
+  margin: 0 auto;
   .box {
     margin: 10px;
     font-size: 11px;
     line-height: 1.4em;
-    float: left;
     box-shadow: 1px 1px 10px #444;
     width: 300px;
     background-color: white;
@@ -392,12 +402,11 @@ footer {
     }
 
     .pin_text {
-      margin-left: 10px;
-      font-size: 11px;
+      margin: 10px 10px 5px;
+      font-size: 12px;
     }
 
-    .description {
-      margin: 10px 10px 5px;
+    .content {
       font-size: 13px;
     }
   }
@@ -405,9 +414,8 @@ footer {
 
 /* JQUERY ISOTOPE CSS
 -------------------------------------------------- */
-.isotope,
-.isotope .isotope-item {
-  /* change duration value to whatever you like */
+.transitions-enabled.masonry,
+.transitions-enabled.masonry .masonry-brick {
   -webkit-transition-duration: 0.3s;
      -moz-transition-duration: 0.3s;
       -ms-transition-duration: 0.3s;
@@ -415,7 +423,7 @@ footer {
           transition-duration: 0.3s;
 }
 
-.isotope {
+.transitions-enabled.masonry {
   -webkit-transition-property: height, width;
      -moz-transition-property: height, width;
       -ms-transition-property: height, width;
@@ -423,43 +431,24 @@ footer {
           transition-property: height, width;
 }
 
-.isotope .isotope-item {
-  -webkit-transition-property: -webkit-transform, opacity;
-     -moz-transition-property:    -moz-transform, opacity;
-      -ms-transition-property:     -ms-transform, opacity;
-       -o-transition-property:      -o-transform, opacity;
-          transition-property:         transform, opacity;
+.transitions-enabled.masonry  .masonry-brick {
+  -webkit-transition-property: left, right, top;
+     -moz-transition-property: left, right, top;
+      -ms-transition-property: left, right, top;
+       -o-transition-property: left, right, top;
+          transition-property: left, right, top;
 }
 
-/**** disabling Isotope CSS3 transitions ****/
 
-.isotope.no-transition,
-.isotope.no-transition .isotope-item,
-.isotope .isotope-item.no-transition {
-  -webkit-transition-duration: 0s;
-     -moz-transition-duration: 0s;
-      -ms-transition-duration: 0s;
-       -o-transition-duration: 0s;
-          transition-duration: 0s;
+/* disable transitions on container */
+.transitions-enabled.infinite-scroll.masonry {
+  -webkit-transition-property: none;
+     -moz-transition-property: none;
+      -ms-transition-property: none;
+       -o-transition-property: none;
+          transition-property: none;
 }
 
-/**** disable CSS transitions for containers with infinite scrolling*/
-.isotope.infinitescrolling {
-  -webkit-transition: none;
-     -moz-transition: none;
-      -ms-transition: none;
-       -o-transition: none;
-          transition: none;
-}
-
-/* MODAL WINDOW
--------------------------------------------------- */
-.modal-dialog {
-  width: 80%;
-  .modal-body {
-    img {
-      margin: 0 auto;
-      width: 90%;
-    }
-  }
-}
+.clearfix:before, .clearfix:after { content: ""; display: table; }
+.clearfix:after { clear: both; }
+.clearfix { zoom: 1; }

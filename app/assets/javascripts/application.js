@@ -12,8 +12,10 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require jquery.isotope.min.js
-//= require jquery.infinitescroll.min.js
+//= require jquery.turbolinks
 //= require turbolinks
+//= require masonry/jquery.infinitescroll.min
+//= require masonry/jquery.imagesloaded.min
+//= require masonry/jquery.masonry
 //= require bootstrap.min.js
 //= require_tree .
